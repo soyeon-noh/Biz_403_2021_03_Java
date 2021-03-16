@@ -41,10 +41,20 @@
 - git commit -m "comment"
 
 7. local 저장소에 있는 파일들을 원격저장소로 업로드 하라
-- git push https://github.com/soyeon-noh/Biz_403_2021_Java.git master
+- git push https://github.com/soyeon-noh/Biz_403_2021_03_Java.git master
 
-git push https://github.com/soyeon-noh/Biz_403_2021_03_Java.git master
-
-https://github.com/soyeon-noh/Biz_403_2021_03_Java.git
 
 bash 붙여넣기 = 쉬프트 + insert
+
+
+## 원격저장소와 연결된 프로젝트에 새로운 코드 추가하기
+* git add .
+* git commit -m "Hello_02 추가"
+* git push https://github.com/soyeon-noh/Biz_403_2021_03_Java.git master
+
+## 원격저장소 주소를 단축하여 입력하기
+1. 원격저장소 주소를 별명으로 설정하기
+* git remote add origin https://github.com/soyeon-noh/Biz_403_2021_03_Java.git
+
+* git push -u origin master 라고 하면 된다.
+* git push 라고 해도 이제 기억해서 주소 그대로 친거나 별명이나 둘다 인식해서 그대로 한다.
