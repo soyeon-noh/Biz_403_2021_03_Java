@@ -34,7 +34,7 @@ public class App_02 {
 			if(intMembers[i] % (pizzaBox * 6) > 0) {
 				pizzaBox++;
 			}
-			System.out.printf("%d 인원수 %d, 피자주문 %d"
+			System.out.printf("%d 인원 %d, 피자주문 %d"
 					, (i+1), intMembers[i], pizzaBox);
 		}
 		

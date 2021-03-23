@@ -33,7 +33,7 @@ public class App_03A {
 		floatAvg = (float) intTotal / 10;
 
 		System.out.println("================================");
-		System.out.printf("총점 :  %d,\t평균 : %3.2f\n", intTotal, floatAvg);
+		System.out.printf("총점 :  %d,\t평균 : %3.2f", intTotal, floatAvg);
 		System.out.println("================================");
 	}
 }
