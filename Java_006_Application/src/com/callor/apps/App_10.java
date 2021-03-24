@@ -41,6 +41,8 @@ public class App_10 {
 		 *  5	6
 		 *  :	:
 		 *  
+		 *  
+		 *  배열의 오름차순 정렬코드 
 		 */
 		
 		for(int i = 0; i < intNums.length; i++) {
