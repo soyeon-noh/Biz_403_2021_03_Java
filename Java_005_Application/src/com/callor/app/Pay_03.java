@@ -22,9 +22,7 @@ public class Pay_03 {
 			}else {
 				nPaper /= 2;
 			}
-			
 			sw *= (-1);
-			
 		}
 	}
 }
