@@ -6,6 +6,17 @@ public class ScoreServiceV5 { // V4에서의 한번에 전부 입력하지 않�
 								//App_05
 
 	String[] subject;
+	
+	/*
+	 *  3과목의 점수를 저장할 배열을 10개 만들었다고 가정
+	 *  
+	 *  8번 요소의 배열에 각각 점수를 저장하자
+	 *  
+	 *  intKor[8] = 90;
+	 *  intEng[8] = 70;
+	 *  intMath[8] = 66;
+	 *  
+	 */
 	int[] intKor;
 	int[] intEng;
 	int[] intMath;
