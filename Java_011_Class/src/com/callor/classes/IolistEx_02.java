@@ -1,11 +1,11 @@
 package com.callor.classes;
 
-import com.callor.classes.service.IolistServiceV1;
+import com.callor.classes.service.IolistServiceV2;
 
 public class IolistEx_02 {
 
 	public static void main(String[] args) {
-		IolistServiceV1 isV1 = new IolistServiceV1();
-		isV1.selectMenu();
+		IolistServiceV2 isV2 = new IolistServiceV2();
+		isV2.selectMenu();
 	}
 }

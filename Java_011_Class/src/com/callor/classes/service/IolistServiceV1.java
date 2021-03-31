@@ -54,16 +54,29 @@ public class IolistServiceV1 {
 			System.out.println("-".repeat(50));
 			System.out.println("1. 매입매출 등록");
 			System.out.println("2. 매입매출 리스트 출력");
-			System.out.println("0. 업무종료");
+			System.out.println("QUIT. 업무종료");
 			System.out.println("-".repeat(50));
-			System.out.println("업무선택>> ");
-			int intMenu = scan.nextInt();
+			System.out.print("업무선택>> ");
+			String strMenu = scan.nextLine();
+			if(strMenu.equals("QUIT")) {
+				break;
+			}
+			
+			Integer intMenu = null;
+			try {
+				intMenu = Integer.valueOf(strMenu);
+			} catch (Exception e) {
+				// TODO: handle exception
+				System.out.println("메뉴 선택 오류!!");
+				System.out.println("메뉴는 1 ~ 2, QUIT 만 입력가능");
+				continue;
+			}
+			
+
 			if (intMenu == 1) {
 				this.input();
 			} else if (intMenu == 2) {
 				this.printAllList();
-			} else if (intMenu == 0) {
-				break;
 			}
 		} //end while
 		
@@ -96,7 +109,7 @@ public class IolistServiceV1 {
 		System.out.print("매입단가 >> ");
 		Integer iprice = scan.nextInt();
 
-		System.out.print("매출단가 >>");
+		System.out.print("매출단가 >> ");
 		Integer opirce = scan.nextInt();
 
 		IolistVOA iolistVO = new IolistVOA();
@@ -130,7 +143,7 @@ public class IolistServiceV1 {
 			// IolistVO vo = iolist[i] 와 비슷함
 			IolistVOA vo = iolist.get(i); // 대신 이건 클래스여서 getter로 가져온다.
 			this.printIolist(vo);
-			
+			 
 			//this.printIolist( iolist.get(i) ); 처럼 한줄로 쓸 수도 있다.
 		}
 		System.out.println("=".repeat(50));
