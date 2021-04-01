@@ -1,14 +1,13 @@
 package com.callor.reload;
 
-import com.callor.reload.service.PrimeServiceV1;
+import com.callor.reload.service.PrimeServiceV4;
 
 public class PrimeEx_01 {
 
 	public static void main(String[] args) {
-		PrimeServiceV1 psV1 = new PrimeServiceV1();
-		psV1.primeNum();
-		psV1.primeNum();
-		psV1.primeNum();
-		psV1.primeNum();
+		PrimeServiceV4 psV4 = new PrimeServiceV4();
+		psV4.primeNum();
+		psV4.printPrimeNum();
+		
 	}
 }
