@@ -13,7 +13,7 @@ public class Method_01 {
 		 * Random 클래스를 사용하여 rnd 객체를 선언하고
 		 * 		Random() 생성자 method를 호출하여
 		 * 		객체를 생성(초기화)하는 코드
-		 * 객체를 선언만 하고 생성(초기화)하지 않으은채
+		 * 객체를 선언만 하고 생성(초기화)하지 않은 상태로
 		 * 		객체.method()를 호출하면
 		 * 		NullPointerException이 발생한다.
 		 * 
