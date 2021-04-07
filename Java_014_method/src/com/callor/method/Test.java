@@ -1,13 +1,13 @@
 package com.callor.method;
 
-import com.callor.method.service.ScoreServiceV4;
+import com.callor.method.service.ScoreServiceV6;
 
 
 public class Test {
 
 	public static void main(String[] args) {
-		ScoreServiceV4 ssV4 = new ScoreServiceV4();
-		ssV4.inputScore();
+		ScoreServiceV6 ssV6 = new ScoreServiceV6();
+		ssV6.inputScore();
 		
 	}
 }

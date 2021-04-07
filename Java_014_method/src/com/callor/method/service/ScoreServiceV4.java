@@ -6,8 +6,9 @@ public class ScoreServiceV4 {
 		InputServiceV2 inService = new InputServiceV2();
 		
 		String[] subject = {"국어", "영어", "수학"};
-		Integer[] score = new Integer[3];
+		Integer[] score = new Integer[subject.length];
 		int sum = 0;
+		
 		float avg = 0.0f;
 		
 		for(int i = 0; i < subject.length; i++) {
@@ -19,7 +20,7 @@ public class ScoreServiceV4 {
 			sum += score[i];
 		}
 		
-		avg = (float)sum / 3;
+		avg = (float)sum / subject.length;
 		
 		System.out.printf("총점 : %d\n", sum);
 		System.out.printf("평균 : %5.2f", avg);
