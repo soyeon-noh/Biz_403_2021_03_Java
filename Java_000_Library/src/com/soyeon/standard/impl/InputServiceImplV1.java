@@ -52,7 +52,7 @@ public class InputServiceImplV1 implements InputService {
 	}
 
 	@Override
-	public Integer inputVlaue(String title, int start) {
+	public Integer inputValue(String title, int start) {
 		// TODO 시작값을 갖는 유효성 검사 추가한 method
 		title = String.format("%s ( %d 이상 )", title, start);
 		while(true) {
@@ -69,7 +69,7 @@ public class InputServiceImplV1 implements InputService {
 	}
 
 	@Override
-	public Integer inputVlaue(String title, int start, int end) {
+	public Integer inputValue(String title, int start, int end) {
 		// TODO 제목, 시작값, 종료값으로 유효성 검사 method
 		title = String.format("%s(%d ~ %d 범위)", title, start,end);
 		

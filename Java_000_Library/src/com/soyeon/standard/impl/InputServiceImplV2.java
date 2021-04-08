@@ -11,13 +11,13 @@ public class InputServiceImplV2 implements InputService {
 	}
 
 	@Override
-	public Integer inputVlaue(String title, int start) {
+	public Integer inputValue(String title, int start) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Integer inputVlaue(String title, int start, int end) {
+	public Integer inputValue(String title, int start, int end) {
 		// TODO Auto-generated method stub
 		return null;
 	}

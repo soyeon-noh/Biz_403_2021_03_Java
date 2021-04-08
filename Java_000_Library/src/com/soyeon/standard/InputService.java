@@ -31,8 +31,8 @@ package com.soyeon.standard;
  */
 public interface InputService { // 앞으로 만들고자 하는 클래스의 설계도
 	public Integer inputValue(String title); // 이를 바탕으로 실제 클래스를 만들게됨
-	public Integer inputVlaue(String title, int start);
-	public Integer inputVlaue(String title, int start, int end);
+	public Integer inputValue(String title, int start);
+	public Integer inputValue(String title, int start, int end);
 }
 
 /*

@@ -18,8 +18,8 @@ public class Ex_01 {
 		//인터페이스로 선언하고 생성할때는 구체적클래스에서 
 		
 		isV1.inputValue("새우깡");
-		isV1.inputVlaue("새우깡", 0);
-		isV1.inputVlaue("새우깡", 0, 1000);
+		isV1.inputValue("새우깡", 0);
+		isV1.inputValue("새우깡", 0, 1000);
 		
 		/*
 		 * List 인터페이스를 구현한 클래스는
