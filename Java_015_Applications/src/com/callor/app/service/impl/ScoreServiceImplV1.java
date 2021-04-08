@@ -89,7 +89,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 			if (check.trim().equals("0")) {
 				return 0;
 			} else if (check.trim().equals("1")) {
-				System.out.println("=".repeat(50));
+				System.out.println("-".repeat(50));
 				System.out.println(num +"번 " + name + "학생의 성적입력을 시작합니다");
 				return 1;
 			} else {
