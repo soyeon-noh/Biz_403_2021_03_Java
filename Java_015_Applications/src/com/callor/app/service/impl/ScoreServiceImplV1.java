@@ -17,8 +17,9 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	String[] subject;
 	Integer[] score;
-	int cStd;
-
+	
+	int line;
+	
 	public ScoreServiceImplV1() {
 		scan = new Scanner(System.in);
 		scoreList = new ArrayList<ScoreVO>();
@@ -26,20 +27,20 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 		subject = new String[] { "국어", "영어", "수학" };
 		score = new Integer[subject.length];
-		cStd = 5;
+		line = 55;
 	}
 
 	@Override
 	public void selectMenu() {
-		// TODO Auto-generated method stub
+		// TODO 메뉴
 		while (true) {
-			System.out.println("=".repeat(50));
+			System.out.println("=".repeat(line));
 			System.out.println("성적입력 시스템");
-			System.out.println("-".repeat(50));
+			System.out.println("-".repeat(line));
 			System.out.println("1. 성적입력");
 			System.out.println("2. 성적리스트 출력");
 			System.out.println("0. 업무종료");
-			System.out.println("-".repeat(50));
+			System.out.println("-".repeat(line));
 			System.out.print("업무선택 >> ");
 			String strMenu = scan.nextLine();
 			if (strMenu.equals("1")) {
@@ -60,7 +61,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 	}
 
 	public Integer inputNum() {
-		// TODO 학생의 학번을 입력받고 학번을 return
+		// TODO 학생의 학번을 입력받고 학번을 return (null 중단)
 		Integer intNum = isV1.inputValue("학번", 1);
 		if (intNum == null) {
 			return null;
@@ -70,7 +71,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	@Override
 	public String inputName() {
-		// TODO 학생의 이름을 입력받고 이름을 return
+		// TODO 학생의 이름을 입력받고 이름을 return (null 중단)
 		System.out.println("학생의 이름을 입력하세요(QUIT: 입력중단)");
 		System.out.print(">> ");
 		String inName = scan.nextLine();
@@ -89,7 +90,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 			if (check.trim().equals("0")) {
 				return 0;
 			} else if (check.trim().equals("1")) {
-				System.out.println("-".repeat(50));
+				System.out.println("-".repeat(line));
 				System.out.println(num +"번 " + name + "학생의 성적입력을 시작합니다");
 				return 1;
 			} else {
@@ -103,7 +104,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 		// TODO 학생의 국영수 성적을 입력받고 ArrayList에 추가 (무한반복)
 
 		while (true) {
-			System.out.println("=".repeat(50));
+			System.out.println("=".repeat(line));
 
 			// 학번 입력 : this.inputNum()
 			Integer stdNum = this.inputNum();
@@ -118,7 +119,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 				return;
 			}
 
-			// 학번 이름 확인
+			// 학번 이름 확인 : this.checkNum()
 			int check = this.checkNum(stdNum, stdName);
 			if (check == 0) {
 				continue;
@@ -149,13 +150,13 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	@Override
 	public void printSocre() {
-		// TODO Auto-generated method stub
+		// TODO 성적표 출력 scoreList.get()
 
-		System.out.println("=".repeat(50));
+		System.out.println("=".repeat(line));
 		System.out.println("성적리스트");
-		System.out.println("-".repeat(50));
+		System.out.println("-".repeat(line));
 		System.out.println("학번\t이름\t국어\t영어\t수학\t총합\t평균");
-		for (int i = 0; i < cStd; i++) {
+		for (int i = 0; i < scoreList.size(); i++) {
 			System.out.printf("%3s\t", scoreList.get(i).getNum());
 			System.out.printf("%3s\t", scoreList.get(i).getName());
 			System.out.printf("%3d\t", scoreList.get(i).getKor());
