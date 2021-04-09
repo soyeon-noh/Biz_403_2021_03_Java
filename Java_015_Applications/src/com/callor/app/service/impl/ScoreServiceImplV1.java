@@ -60,13 +60,14 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 	}
 
-	public Integer inputNum() {
+	public String inputNum() {
 		// TODO 학생의 학번을 입력받고 학번을 return (null 중단)
 		Integer intNum = isV1.inputValue("학번", 1);
 		if (intNum == null) {
 			return null;
 		}
-		return intNum;
+		String strNum = String.format("%03d", intNum);
+		return strNum;
 	}
 
 	@Override
@@ -81,7 +82,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 		return inName;
 	}
 
-	public Integer checkNum(Integer num, String name) {
+	public Integer checkNum(String num, String name) {
 		// TODO 학번과 이름이 맞는지 확인하고 맞으면 1, 아니면 0 return
 		while (true) {
 			System.out.println(num + "번 " + name + "학생이 맞습니까?");
@@ -107,10 +108,11 @@ public class ScoreServiceImplV1 implements ScoreService {
 			System.out.println("=".repeat(line));
 
 			// 학번 입력 : this.inputNum()
-			Integer stdNum = this.inputNum();
+			String stdNum = this.inputNum();
 			if (stdNum == null) {
 				return;
 			}
+
 
 			// 이름 입력 : this.inputName()
 			String stdName = this.inputName();
@@ -136,7 +138,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 
 			// ArrayList에 추가
 			ScoreVO VO = new ScoreVO();
-			VO.setNum(stdNum + "");
+			VO.setNum(stdNum);
 			VO.setName(stdName);
 
 			VO.setKor(score[0]);

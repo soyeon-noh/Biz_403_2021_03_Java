@@ -80,8 +80,14 @@ public class ScoreServiceImplV1A implements ScoreService {
 		this.inputName("무명");
 		return null;
 	}
-
-	private String inputNum() {
+	
+	/*
+	 * 현재 클래스 내부에서만 호출되는 method는 
+	 * 		private 로 선언한다.
+	 * 현재 클래스를 상속받아 확장하여 사용할 수 있도록 하려면
+	 * pribate => protected로 변경해주는 것이 좋다.
+	 */
+	protected String inputNum() {
 		// 학번입력처리 : 001, 002, 형식으로 입력받자
 		// 정수 1 이상을 입력하면
 		// 정수 값이 intNum에 담길 것이고
@@ -176,6 +182,7 @@ public class ScoreServiceImplV1A implements ScoreService {
 	}
 
 	@Override
+	
 	public void printSocre() {
 		// TODO 리스트 출력하기
 		System.out.println("=".repeat(80));
