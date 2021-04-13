@@ -87,7 +87,13 @@ public class ScoreServiceImplV1Ex extends ScoreServiceImplV1 {
 			if(menu == 1) {
 				// menu 가 1일 때
 			} else if(menu == 2) {
+				this.inputScore();
 			} else if(menu == 3) {
+				this.readScore();
+			} else if(menu == 4) {
+				this.saveScore();
+			} else if(menu == 5) {
+				this.printScore();
 			}
 		}
 	}

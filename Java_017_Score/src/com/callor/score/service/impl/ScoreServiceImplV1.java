@@ -28,23 +28,24 @@ public class ScoreServiceImplV1 implements ScoreService {
 		MenuService msV1 
 		= new MenuServiceImplV1("대한 고등학교 성적처리 시스템 2021", menuList);
 
-		Integer menu = msV1.selectMenu();
+		while(true) {
+			Integer menu = msV1.selectMenu();
 
-		if (menu == null) {
-			System.out.println("시스템 종료");
-			return;
-		} else if (menu == 1) {
-			// 보류
-		} else if (menu == 2) {
-			this.inputScore();
-		} else if (menu == 3) {
-			this.readScore();
-		} else if (menu == 4) {
-			this.saveScore();
-		} else if (menu == 5) {
-			this.printScore();
+			if (menu == null) {
+				System.out.println("시스템 종료");
+				return;
+			} else if (menu == 1) {
+				// 보류
+			} else if (menu == 2) {
+				this.inputScore();
+			} else if (menu == 3) {
+				this.readScore();
+			} else if (menu == 4) {
+				this.saveScore();
+			} else if (menu == 5) {
+				this.printScore();
+			}
 		}
-
 	}
 
 
