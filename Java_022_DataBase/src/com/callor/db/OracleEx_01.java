@@ -1,0 +1,69 @@
+package com.callor.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.callor.db.service.DBContract;
+
+public class OracleEx_01 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello 오라클");
+		System.out.println("JdbcDriver" 
+				+ DBContract.DB_INFO.JdbcDriver);
+		System.out.println("URL"
+				+ DBContract.DB_INFO.URL);
+		System.out.println("User"
+				+ DBContract.DB_INFO.USER);
+		System.out.println("PASSWORD"
+				+ DBContract.DB_INFO.PASSWORD);
+
+		Connection dbConn = null;
+		// JdbcDriver 실행
+		try { // jdbc드라이버를 실행해줘
+			Class.forName(DBContract.DB_INFO.JdbcDriver);
+			
+			// 드라이버매니저야 이 경로와 사용자뭐시기로 로그인해줘
+			
+			// JDBC Driver를 통하여 Oracle Server에 접속해 달라
+			// 접속이 성공하면 그 정보를 dbConn에 담아달라
+			dbConn = DriverManager.getConnection( 
+					DBContract.DB_INFO.URL,
+					DBContract.DB_INFO.USER,
+					DBContract.DB_INFO.PASSWORD
+					);
+			System.out.println("Oracle 연결 성공!!!");
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("JDBC Driver 없음!!");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// 연결 완료!!
+		PreparedStatement pStr = null;
+		
+		// 서버로 보낼 명령문
+		String sql = "SELECT * FROM tbl_iolist"; 
+		try {
+			pStr = dbConn.prepareStatement(sql);
+			ResultSet result = pStr.executeQuery();
+			
+			while(result.next()) {
+				System.out.println(result.getString(2));
+			}
+			result.close();
+			dbConn.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
