@@ -9,7 +9,6 @@ public class ScoreServiceImplV2 extends ScoreServiceImplV1{
 
 	public ScoreServiceImplV2() {
 		scoreList = new ArrayList<ScoreVO>();
-		scan = new Scanner(System.in);
 	}
 	// 뭐.??? 뭔오류났음?
 	// 아 상속받는거 private에서 protected 바꿔야한다

@@ -12,9 +12,10 @@ public class ScoreServiceImplV1 implements ScoreService{
 	
 	// 오바라이드 골뱅이 지워도됨
 	
-
-	private List<ScoreVO> scoreList;
-	private Scanner scan;
+	protected List<ScoreVO> scoreList;
+	protected Scanner scan;
+//	private List<ScoreVO> scoreList;
+//	private Scanner scan;
 	
 	public ScoreServiceImplV1() {
 		scoreList = new ArrayList<ScoreVO>();
@@ -24,6 +25,6 @@ public class ScoreServiceImplV1 implements ScoreService{
 	public void inputScore() {
 	}
 
-	public void pringList() {
+	public void pritList() {
 	}
 }

@@ -19,4 +19,14 @@ public class MainEx_07 {
 	 * 
 	 * 구구단 출력하기
 	 */
+	
+	public static void main(String[] args) {
+		System.out.println("=".repeat(50));
+		System.out.println("5단 구구단");
+		for(int i = 0; i < 9; i++) {
+			int num = i + 1;
+			System.out.printf("5 x %d = %2d\n", num, num * 5);
+		}
+		System.out.println("=".repeat(50));
+	}
 }

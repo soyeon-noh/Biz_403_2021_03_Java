@@ -23,6 +23,8 @@ public class MainEx_04 {
 		Character char2; //중요
 		
 		long long1;
-		long long2;
+		Long long2;
+		
+		
 	}
 }
